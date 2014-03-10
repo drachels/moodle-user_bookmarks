@@ -1,3 +1,4 @@
+<?php
 $capabilities = array(
  
     'block/user_bookmarks:myaddinstance' => array(
