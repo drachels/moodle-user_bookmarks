@@ -27,7 +27,7 @@
  *             Authors of User Bookmarks Old Version:-
  *               2012 Gurvinder Singh (used admin bookmarks code, updated to create user bookmarks block)
  *             Authors of User Bookmarks This Version:-
- *               2013 Jonas Rüegge (used user bookmarks block and updated it to Moodle 2.4 / 2.5 Compability and Multilingual Support)
+ *               2013 Jonas Rï¿½egge (used user bookmarks block and updated it to Moodle 2.4 / 2.5 Compability and Multilingual Support)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
  */
@@ -67,7 +67,7 @@ class block_user_bookmarks extends block_base {
      * @return array
      */
     function applicable_formats() {
-        if (has_capability('moodle/site:config', get_context_instance(CONTEXT_SYSTEM))) {
+        if (has_capability('moodle/site:config', context_system::instance())) {
             return array('all' => true);
         } else {
             return array('site' => true);
