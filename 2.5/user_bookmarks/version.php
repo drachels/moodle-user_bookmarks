@@ -26,14 +26,14 @@
  *             Authors of User Bookmarks Old Version:-
  *               2012 Gurvinder Singh (used admin bookmarks code, updated to create user bookmarks block)
  *             Authors of User Bookmarks This Version:-
- *               2013 Jonas Rüegge (used user bookmarks block and updated it to Moodle 2.5 Compability and Multilingual Support)
+ *               2013 Jonas Rï¿½egge (used user bookmarks block and updated it to Moodle 2.5 Compability and Multilingual Support)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2013101401;        // The current plugin version (Date: YYYYMMDDXX)
+$plugin->version   = 2014031001;        // The current plugin version (Date: YYYYMMDDXX)
 $plugin->requires  = 2011112900;        // Requires this Moodle version
 $plugin->component = 'block_user_bookmarks'; // Full name of the plugin (used for diagnostics)
-$plugin->release   = '1.1.3';
-$plugin->maturity = MATURITY_STABLE;
+$plugin->release   = '1.1.4';
+$plugin->maturity = MATURITY_BETA;
