@@ -28,7 +28,9 @@
  */
 
 $string['pluginname'] = 'Benutzer Lesezeichen Block';
-$string['user_bookmarks'] = 'Lesezeichen';
+$string['user_bookmarks'] = 'Meine Lesezeichen';
+$string['user_bookmarks:title'] = 'Meine Lesezeichen';
+$string['user_bookmarks:text'] = 'Lesezeichen Block um eigene Lesezeichen zu erstellen';
 $string['user_bookmarks:addinstance'] = 'Neuen Lesezeichen Block hinzuf&uuml;gen';
 $string['user_bookmarks:myaddinstance'] = 'Neuen Lesezeichen Block zur Startseite hinzuf&uuml;gen';
 $string['user_bookmarks:bookmarkpage'] = 'Lesezeichen f&uuml;r diese Seite';

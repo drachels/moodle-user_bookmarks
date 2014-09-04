@@ -76,13 +76,9 @@ class block_user_bookmarks extends block_base {
         if(!isset($this->config)){
             $this->config = new stdClass();
         }
-        if (!empty($this->config->title)) {
-            $this->title = $this->config->title;
-        } else {
-            $this->config->title = get_string('user_bookmarks', $this->blockname);
-        }
+        $this->config->title = get_string('user_bookmarks:title', $this->blockname);
         if (empty($this->config->text)) {
-            $this->config->text = get_string('user_bookmarks', $this->blockname);
+            $this->config->text = get_string('user_bookmarks:text', $this->blockname);
         }        
     }  
 
@@ -99,15 +95,16 @@ class block_user_bookmarks extends block_base {
      */
     function get_content() {
 
-        global $CFG;
-        $PAGE->set_context($context);
+        global $CFG, $PAGE;
         
         // First check if we have already generated, don't waste cycles
         if ($this->contentgenerated === true) {
             return $this->content;
         }
         $this->content = new stdClass();
-
+        $this->config->title = get_string('user_bookmarks:title', $this->blockname);
+        $this->config->text = get_string('user_bookmarks:text', $this->blockname);
+        
         if (get_user_preferences('user_bookmarks')) {
             require_once($CFG->libdir.'/adminlib.php');
 
@@ -151,7 +148,7 @@ class block_user_bookmarks extends block_base {
     </a>';
                 //setting layout for the bookmark and its delete and edit buttons
                 $contents[] = html_writer::tag('li', $contentlink . " ".$editLink." " . $deleteLink);
-                $bookmarks[]=html_entity_decode($tempBookmark[0]);
+                $bookmarks[]= html_entity_decode($tempBookmark[0]);
             }
             $this->content->text = html_writer::tag('ol', implode('', $contents), array('class' => 'list'));
         } else {
