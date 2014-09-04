@@ -1,4 +1,4 @@
-User Bookmarks Block for Moodle 2.4+ (Tested up to 2.5.1):
+User Bookmarks Block for Moodle 2.4+ (Tested up to 2.7.1):
 
 Suggestions for improvement are welcome on the tracker (tracker.moodle.org).
 

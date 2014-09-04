@@ -3,6 +3,8 @@
 require('../../config.php');
 
 require_login();
+$context = context_system::instance();
+$PAGE->set_context($context);
 
 if ($bookmarkurl = htmlspecialchars_decode($_GET["bookmarkurl"]) and confirm_sesskey()) {
 

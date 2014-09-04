@@ -19,13 +19,13 @@ if ($bookmarkurl = htmlspecialchars_decode($_GET["bookmarkurl"])
         $bookmarkupdated = false;
 
         foreach($bookmarks as $bookmark) {
-        	$tempBookmark = explode('|', $bookmark);
-        	if ($tempBookmark[0] == $bookmarkurl) {
-        		$keyToRemove = array_search($bookmark, $bookmarks);
-        		$newBookmark = $bookmarkurl . "|" . $newtitle;
-        		$bookmarks[$keyToRemove] = $newBookmark;
-        		$bookmarkupdated = true;
-        	}
+            $tempBookmark = explode('|', $bookmark);
+            if ($tempBookmark[0] == $bookmarkurl) {
+                $keyToRemove = array_search($bookmark, $bookmarks);
+                $newBookmark = $bookmarkurl . "|" . $newtitle;
+                $bookmarks[$keyToRemove] = $newBookmark;
+                $bookmarkupdated = true;
+            }
         }
         
         if ($bookmarkupdated == false) {
