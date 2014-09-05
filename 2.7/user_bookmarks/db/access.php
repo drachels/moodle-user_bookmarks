@@ -26,4 +26,47 @@ $capabilities = array(
  
         'clonepermissionsfrom' => 'moodle/site:manageblocks'
     ),
+    
+    'block/user_bookmarks:addbookmark' => array(
+        'riskbitmask' => RISK_SPAM | RISK_XSS,
+
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_BLOCK,
+        'archetypes' => array(
+            'teacher'        => CAP_ALLOW,
+            'editingteacher' => CAP_ALLOW,
+            'manager'          => CAP_ALLOW,
+            'student'        => CAP_ALLOW
+           
+        ),
+    ),
+    
+    'block/user_bookmarks:deletebookmark' => array(
+        'riskbitmask' => RISK_SPAM | RISK_XSS,
+
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_BLOCK,
+        'archetypes' => array(
+            'teacher'        => CAP_ALLOW,
+            'editingteacher' => CAP_ALLOW,
+            'manager'          => CAP_ALLOW,
+            'student'        => CAP_ALLOW
+            
+        ),
+    ),
+    
+    'block/user_bookmarks:viewbookmarks' => array(
+        'riskbitmask' => RISK_SPAM | RISK_XSS,
+
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_BLOCK,
+        'archetypes' => array(
+           'teacher'        => CAP_ALLOW,
+            'editingteacher' => CAP_ALLOW,
+            'manager'          => CAP_ALLOW,
+            'student'        => CAP_ALLOW
+           
+        ),
+       'clonepermissionsfrom' => 'moodle/site:manageblocks'
+    ),
 );

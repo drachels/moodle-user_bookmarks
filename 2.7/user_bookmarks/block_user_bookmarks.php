@@ -81,14 +81,8 @@ class block_user_bookmarks extends block_base {
 
     /**
      * Gets the content for this block
-     * Needed Strings for Multilingual Support in lang/XY/block_user_bookmars.php for this function
-     * avaiable via get_string(); (@JR2013):
-     * deletemarkpage -> Text for Delete Option in Block
-     * bookmarkpage -> Text for Link to Create a new Bookmarks
-     * editbookmark -> Text for Link to Edit Text of a Bookmark
-     * editbookmarktitle -> Titletext for Box to Edit Text of a Bookmark
-     * enterbookmarktitle -> Titletext for Box to create a Bookmark
-     * 
+     * Needed Strings for Multilingual Support for this function
+     * avaiable via get_string(); (@JR2013)
      */
     function get_content() {
 
@@ -101,6 +95,7 @@ class block_user_bookmarks extends block_base {
         }
         $this->content = new stdClass();
         
+        $noscript = '<noscript>'.get_string('error:noscript', 'block_user_bookmarks').'</noscript>';
         $javascript='    <script type="text/javascript">
     function updateBookmark(bookmarkURL, defaultTitle, sesskey, wwwroot) {
         var newBookmarkTitle = prompt(\''.get_string('editbookmarktitle', 'block_user_bookmarks').'\',defaultTitle);
@@ -176,7 +171,7 @@ class block_user_bookmarks extends block_base {
 
         if (in_array($bookmarkurl, $bookmarks)) {
             //this prints out the link to unbookmark a page
-            $this->content->footer = $javascript . '
+            $this->content->footer = $javascript . $noscript . '
     <form style="cursor: hand;">
     <a style="cursor: pointer;" onClick="deleteBookmark(\''.$bookmarkurl.'\', \''.sesskey().'\', \''.$CFG->wwwroot.'\');"> ('
      .get_string('deletebookmarkthissite', 'block_user_bookmarks'). ') </a>

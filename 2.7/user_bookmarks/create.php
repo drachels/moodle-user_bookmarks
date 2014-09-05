@@ -38,7 +38,7 @@ if ($bookmarkurl = htmlspecialchars_decode($_GET["bookmarkurl"]) and $title = $_
         $bookmarks = explode(',', get_user_preferences('user_bookmarks'));
         
         if (in_array(($bookmarkurl . "|" . $title), $bookmarks)) {
-            print_error(get_string('Error:bookmarkalreadyexists', 'block_user_bookmarks'), 'admin');
+            print_error(get_string('error:bookmarkalreadyexists', 'block_user_bookmarks'), 'admin');
             die;
         }
 
@@ -56,7 +56,7 @@ if ($bookmarkurl = htmlspecialchars_decode($_GET["bookmarkurl"]) and $title = $_
     global $CFG;
     header("Location: " . $CFG->wwwroot . $bookmarkurl);
 } else {
-    print_error(get_string('Error:invalidsection', 'block_user_bookmarks'), 'admin');
+    print_error(get_string('error:invalidsection', 'block_user_bookmarks'), 'admin');
     die;
 }
 

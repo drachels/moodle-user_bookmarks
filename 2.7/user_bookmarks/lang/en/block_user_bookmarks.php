@@ -44,7 +44,8 @@ $string['creategroup'] = 'Create new Bookmarkgroup';
 $string['deletegroup'] = 'Delete Bookmarkgroup';
 $string['setgroup'] = 'Move to Bookmarkgroup';
 /* ErrorMSGs */
-$string['Error:nobookmarksforuser'] = 'You do not have any bookmarks!';
-$string['Error:invalidsection'] = 'Invalid Section!';
-$string['Error:bookmarkalreadyexists'] = 'Bookmark already Exists!';
-$string['Error:nonexistentbookmark'] = 'Bookmark not found!';
+$string['error:nobookmarksforuser'] = 'You do not have any bookmarks!';
+$string['error:invalidsection'] = 'Invalid Section!';
+$string['error:bookmarkalreadyexists'] = 'Bookmark already Exists!';
+$string['error:nonexistentbookmark'] = 'Bookmark not found!';
+$string['error:noscript'] = 'This Block requires Javascript 3enabled to work!';
