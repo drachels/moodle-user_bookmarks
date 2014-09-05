@@ -26,16 +26,25 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
  */
-
-$string['pluginname'] = 'User Bookmarks block';
-$string['user_bookmarks'] = 'User Bookmarks';
-$string['user_bookmarks:title'] = 'My Bookmarks';
-$string['user_bookmarks:text'] = 'Bookmarks Block where you can set your own Bookmarks';
 $string['user_bookmarks:addinstance'] = 'Add a new Block for Custom Bookmarks';
-$string['user_bookmarks:myaddinstance'] = "Add a new Block for Custom Bookmarks to MyMoodle";
-$string['user_bookmarks:bookmarkpage'] = 'Bookmark this Site';
-$string['user_bookmarks:deletebookmark'] = 'remove bookmark';
-$string['user_bookmarks:editbookmark'] = 'edit bookmark';
-$string['user_bookmarks:editbookmarktitle'] = 'edit bookmark title';
-$string['user_bookmarks:enterbookmarktitle'] = 'enter bookmark title';
+$string['user_bookmarks:myaddinstance'] = 'Add a new Block for Custom Bookmarks to MyMoodle';
+$string['pluginname'] = 'User Bookmarks block';
+$string['block_name'] = 'User Bookmarks';
+$string['blocktitle'] = 'User Bookmarks';
+$string['description'] = 'Bookmarks Block where you can set your own Bookmarks';
+/* Actions */
+$string['bookmarkpage'] = 'Bookmark this Site';
+$string['deletebookmark'] = 'remove bookmark';
+$string['editbookmark'] = 'edit bookmark';
+$string['editbookmarktitle'] = 'edit bookmark title';
+$string['enterbookmarktitle'] = 'enter bookmark title';
+$string['deletebookmarkthissite'] = 'remove bookmark for this site';
 
+$string['creategroup'] = 'Create new Bookmarkgroup';
+$string['deletegroup'] = 'Delete Bookmarkgroup';
+$string['setgroup'] = 'Move to Bookmarkgroup';
+/* ErrorMSGs */
+$string['Error:nobookmarksforuser'] = 'You do not have any bookmarks!';
+$string['Error:invalidsection'] = 'Invalid Section!';
+$string['Error:bookmarkalreadyexists'] = 'Bookmark already Exists!';
+$string['Error:nonexistentbookmark'] = 'Bookmark not found!';

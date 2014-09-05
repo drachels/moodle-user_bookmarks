@@ -15,12 +15,12 @@ if ($bookmarkurl = htmlspecialchars_decode($_GET["bookmarkurl"]) and confirm_ses
         $bookmarkremoved = false;
 
         foreach($bookmarks as $bookmark) {
-        	$tempBookmark = explode('|', $bookmark);
-        	if ($tempBookmark[0] == $bookmarkurl) {
-        		$keyToRemove = array_search($bookmark, $bookmarks);
-        		unset($bookmarks[$keyToRemove]);
-        		$bookmarkremoved = true;
-        	}
+            $tempBookmark = explode('|', $bookmark);
+            if ($tempBookmark[0] == $bookmarkurl) {
+                $keyToRemove = array_search($bookmark, $bookmarks);
+                unset($bookmarks[$keyToRemove]);
+                $bookmarkremoved = true;
+            }
         }
         
         if ($bookmarkremoved == false) {

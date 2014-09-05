@@ -1,4 +1,27 @@
 <?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Version details
+ *
+ * @package    block
+ * @subpackage block_user_bookmarks
+ * @copyright  Jonas Rüegge
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 require('../../config.php');
 
@@ -15,7 +38,7 @@ if ($bookmarkurl = htmlspecialchars_decode($_GET["bookmarkurl"]) and $title = $_
         $bookmarks = explode(',', get_user_preferences('user_bookmarks'));
         
         if (in_array(($bookmarkurl . "|" . $title), $bookmarks)) {
-            print_error('bookmarkalreadyexists','admin');
+            print_error(get_string('Error:bookmarkalreadyexists', 'block_user_bookmarks'), 'admin');
             die;
         }
 
@@ -33,7 +56,7 @@ if ($bookmarkurl = htmlspecialchars_decode($_GET["bookmarkurl"]) and $title = $_
     global $CFG;
     header("Location: " . $CFG->wwwroot . $bookmarkurl);
 } else {
-    print_error('invalidsection','admin');
+    print_error(get_string('Error:invalidsection', 'block_user_bookmarks'), 'admin');
     die;
 }
 
