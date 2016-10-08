@@ -33,12 +33,12 @@ $string['block_name'] = 'User Bookmarks';
 $string['blocktitle'] = 'User Bookmarks';
 $string['description'] = 'Bookmarks Block where you can set your own Bookmarks';
 /* Actions */
-$string['bookmarkpage'] = 'Bookmark this Site';
-$string['deletebookmark'] = 'remove bookmark';
-$string['editbookmark'] = 'edit bookmark';
-$string['editbookmarktitle'] = 'edit bookmark title';
-$string['enterbookmarktitle'] = 'enter bookmark title';
-$string['deletebookmarkthissite'] = 'remove bookmark for this site';
+$string['bookmarkpage'] = 'Bookmark this location';
+$string['deletebookmark'] = 'Remove bookmark';
+$string['editbookmark'] = 'Edit bookmark';
+$string['editbookmarktitle'] = 'Edit bookmark title';
+$string['enterbookmarktitle'] = 'Enter bookmark title';
+$string['deletebookmarkthissite'] = 'Remove bookmark for this location';
 
 $string['creategroup'] = 'Create new Bookmarkgroup';
 $string['deletegroup'] = 'Delete Bookmarkgroup';
@@ -49,3 +49,7 @@ $string['error:invalidsection'] = 'Invalid Section!';
 $string['error:bookmarkalreadyexists'] = 'Bookmark already Exists!';
 $string['error:nonexistentbookmark'] = 'Bookmark not found!';
 $string['error:noscript'] = 'This Block requires Javascript 3enabled to work!';
+/* Permission MSGs */
+$string['user_bookmarks:addbookmark'] = 'Add bookmark';
+$string['user_bookmarks:deletebookmark'] = 'Delete bookmark';
+$string['user_bookmarks:viewbookmarks'] = 'View bookmark';
